@@ -1,0 +1,65 @@
+<html>
+<head>
+<meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1">
+<meta http-equiv = "Content-Type" content = "text/html; charset = utf-8">
+<meta name="description" content="A fake handsomeness meter game by HJCD studios">
+<meta name="keywords" content="HJCD studios,Handsomeness meter">
+<meta name="author" content="HJCD studios">
+<title>HJCD studios | Handsome meter</title>
+</head>
+<body>
+<center>
+<input type="text" placeholder="Enter Your Name" id="name">
+<br>
+<input type="button" value="Run" onClick="runs();">
+</center>
+
+<style type="text/css">
+input[type="button"] {
+  color: rgb(0,150,255);
+  background-color: white;
+  border-color: rgb(0,150,255);
+  font-size: 20px;
+  border-radius: 20px;
+  padding: 2px;
+}
+input[type="text"] {
+  background-color: white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-color: rgb(0,150,255);
+  font-size: 20px;
+  border-radius: 20px;
+  padding: 5px;
+}
+</style>
+<script type="text/javascript">
+/*
+By HJCD studios
+*/
+function runs() {
+  var nam = name.value;
+  if (nam.length >= 1) {
+    var num = Math.floor(Math.random() * 100) + 1;
+    alert(nam + " Is " + num + "% Handsome\n" + r(num));
+  } else {
+    alert("Name Cannot be blank");
+  }
+}
+function r(num) {
+  if (num >= 40 && num <= 60) {
+    return "I guess your normal";
+  }
+  else if (num <= 40 && num >= 0) {
+    return "You're ugly sorry";
+  }
+  else if (num >= 60 && num <= 100) {
+    return "You're super CUTE!";
+  }
+  else {
+    return "HMMMM...";
+  }
+</script>
+</body>
+</html>
